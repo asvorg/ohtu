@@ -1,3 +1,3 @@
 # Ohjelmistotuotanto
 
-[Ohjelmistotuotanto](https://ohjelmistotuotanto-hy.github.io/)-kurssin laskareissa käytettävä Python-koodi.
+[Ohtuvarasto](https://github.com/asvorg/ohtuvarasto)
