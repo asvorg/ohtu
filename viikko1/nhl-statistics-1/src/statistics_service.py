@@ -50,7 +50,7 @@ class StatisticsService:
             reverse=True,
             key=sort_key
         )
-
+        #testimuutos
         result = []
         i = 0
         while i < how_many and i < len(sorted_players):
