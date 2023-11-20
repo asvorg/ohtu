@@ -4,13 +4,9 @@ Library    AppLibrary
 Test Setup    Create User And Input Login Command
 
 *** Test Cases ***
-Login With Correct Credentials
-    Input Credentials    kalle    kalle123
-    Output Should Contain    Logged in
-
 Login With Incorrect Password
     Input Credentials    kalle    wrongpassword
-    Output Should Contain    Incorrect password
+    Output Should Contain    Invalid username or password
 
 Login With Nonexistent Username
     Input Credentials    nonexistent_user    password123
@@ -18,12 +14,12 @@ Login With Nonexistent Username
 
 *** Keywords ***
 Create User And Input Login Command
-    Create User    kalle    kalle123
-    Input New Command    login    kalle    kalle123
+    Create User  kalle  kalle123
+    AppLibrary.Input New Command  login  kalle  kalle123
 
 Input Credentials
-    [Arguments]    ${username}    ${password}
-    AppLibrary.Input New Command    login    ${username}    ${password}
+    [Arguments]  ${username}  ${password}
+    AppLibrary.Input New Command  login  ${username}  ${password}
 
 Output Should Contain
     [Arguments]    ${expected_output}

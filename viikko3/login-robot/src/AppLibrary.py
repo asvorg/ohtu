@@ -36,3 +36,5 @@ class AppLibrary:
     def input_new_command(self, command, *args):
         # Your logic to handle different commands goes here
         print(f"Executing command: {command} with arguments: {args}")
+
+    
