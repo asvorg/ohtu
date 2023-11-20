@@ -9,13 +9,18 @@ Login With Correct Credentials
     Set Username  kalle
     Set Password  kalle123
     Submit Credentials
-    Login Should Succeed
+    Main Page Should Be Open
 
 Login With Incorrect Password
     Set Username  kalle
     Set Password  kalle456
     Submit Credentials
     Login Should Fail With Message  Invalid username or password
+
+Login With Nonexistent Username
+    Set Password  kalle456
+    Submit Credentials
+    Login Should Fail With Message  Username and password are required
 
 *** Keywords ***
 Login Should Succeed
