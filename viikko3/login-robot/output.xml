@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231120 18:22:42.741" rpa="false" schemaversion="4">
+<suite id="s1" name="Register" source="/home/aapkoski/ohtu/viikko3/login-robot/src/tests/register.robot">
+<test id="s1-t1" name="Register With Valid Username And Password" line="7">
+<kw name="Input New Command" library="resource" type="SETUP">
+<kw name="Input new">
+<msg timestamp="20231120 18:22:42.756" level="FAIL">No keyword with name 'Input new' found. Did you mean:
+    AppLibrary.Input</msg>
+<status status="FAIL" starttime="20231120 18:22:42.756" endtime="20231120 18:22:42.756"/>
+</kw>
+<status status="FAIL" starttime="20231120 18:22:42.755" endtime="20231120 18:22:42.756"/>
+</kw>
+<status status="FAIL" starttime="20231120 18:22:42.754" endtime="20231120 18:22:42.756">Setup failed:
+No keyword with name 'Input new' found. Did you mean:
+    AppLibrary.Input</status>
+</test>
+<test id="s1-t2" name="Register With Already Taken Username And Valid Password" line="10">
+<status status="FAIL" starttime="20231120 18:22:42.756" endtime="20231120 18:22:42.756">Test cannot be empty.</status>
+</test>
+<test id="s1-t3" name="Register With Too Short Username And Valid Password" line="13">
+<status status="FAIL" starttime="20231120 18:22:42.756" endtime="20231120 18:22:42.756">Test cannot be empty.</status>
+</test>
+<test id="s1-t4" name="Register With Enough Long But Invalid Username And Valid Password" line="16">
+<status status="FAIL" starttime="20231120 18:22:42.756" endtime="20231120 18:22:42.757">Test cannot be empty.</status>
+</test>
+<test id="s1-t5" name="Register With Valid Username And Too Short Password" line="19">
+<status status="FAIL" starttime="20231120 18:22:42.757" endtime="20231120 18:22:42.757">Test cannot be empty.</status>
+</test>
+<test id="s1-t6" name="Register With Valid Username And Long Enough Password Containing Only Letters" line="22">
+<status status="FAIL" starttime="20231120 18:22:42.757" endtime="20231120 18:22:42.757">Test cannot be empty.</status>
+</test>
+<status status="FAIL" starttime="20231120 18:22:42.742" endtime="20231120 18:22:42.757"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="6" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231120 18:22:42.752" level="ERROR">Error in file '/home/aapkoski/ohtu/viikko3/login-robot/src/tests/register.robot' on line 2: Importing library 'AppLibrary' failed: ModuleNotFoundError: No module named 'AppLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/aapkoski/.cache/pypoetry/virtualenvs/login-robot-KxAQSYxW-py3.11/bin
+  /usr/lib/python311.zip
+  /usr/lib/python3.11
+  /usr/lib/python3.11/lib-dynload
+  /home/aapkoski/.cache/pypoetry/virtualenvs/login-robot-KxAQSYxW-py3.11/lib/python3.11/site-packages</msg>
+</errors>
+</robot>

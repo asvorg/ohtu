@@ -30,4 +30,9 @@ class AppLibrary:
         self._app.run()
 
     def create_user(self, username, password):
-        self._user_service.create_user(username, password)
+        # Your logic to create a user goes here
+        print(f"Creating user: {username}, {password}")
+
+    def input_new_command(self, command, *args):
+        # Your logic to handle different commands goes here
+        print(f"Executing command: {command} with arguments: {args}")
