@@ -55,21 +55,19 @@ class Kayttoliittyma:
         self._kumoa_painike.grid(row=2, column=3)
 
     def _suorita_komento(self, komento):
-        arvo = 0
+        komento_mapping = {
+            Komento.SUMMA: self._sovellus.plus,
+            Komento.EROTUS: self._sovellus.miinus,
+            Komento.NOLLAUS: self._sovellus.nollaa,
+            Komento.KUMOA: self._sovellus.kumoa
+        }
 
         try:
             arvo = int(self._syote_kentta.get())
-        except Exception:
-            pass
+        except ValueError:
+            arvo = 0
 
-        if komento == Komento.SUMMA:
-            self._sovellus.plus(arvo)
-        elif komento == Komento.EROTUS:
-            self._sovellus.miinus(arvo)
-        elif komento == Komento.NOLLAUS:
-            self._sovellus.nollaa()
-        elif komento == Komento.KUMOA:
-            pass
+        komento_mapping[komento](arvo)
 
         self._kumoa_painike["state"] = constants.NORMAL
 
