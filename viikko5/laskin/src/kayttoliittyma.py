@@ -61,13 +61,17 @@ class Kayttoliittyma:
             Komento.NOLLAUS: self._sovellus.nollaa,
             Komento.KUMOA: self._sovellus.kumoa
         }
-
         try:
             arvo = int(self._syote_kentta.get())
         except ValueError:
             arvo = 0
 
-        komento_mapping[komento](arvo)
+            if komento == Komento.KUMOA:
+                self._sovellus.kumoa()
+        else:
+            self._sovellus.aseta_arvo(arvo)
+            komento_mapping[komento](arvo)
+
 
         self._kumoa_painike["state"] = constants.NORMAL
 
